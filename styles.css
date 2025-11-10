@@ -1,0 +1,93 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: red;
+}
+
+.container {
+  min-height: 10rem;
+  max-width: 75rem;
+  margin: auto;
+  background-color: white;
+  padding: 1rem;
+}
+
+#pageheader {
+  background-color: coral;
+  min-height: auto;
+  padding: 1rem;
+}
+
+#logo {
+  width: 6.25rem;
+  height: 6.25rem;
+  background-color: none;
+  background-image: url(WorkSamples/XClogo.png);
+}
+
+#pageheader .container {
+  background-color: none;
+  min-height: auto;
+  text-align: center;
+}
+
+#media {
+  background-color: red;
+  min-height: 1rem;
+  padding: 1rem;
+  background-image: url(Images/hero.png);
+  background-size: cover;
+  aspect-ratio: 16 / 9;
+}
+
+#career {
+  background-color: aqua;
+  min-height: 10rem;
+  padding: 1rem;
+}
+
+#pagecontent {
+  background-color: lightgreen;
+  min-height: 10rem;
+  padding: 1rem;
+}
+
+#semester1 {
+  background-color: plum;
+  min-height: 10rem;
+  padding: 1rem;
+}
+
+#semester2 {
+  background-color: brown;
+  min-height: 10rem;
+  padding: 1rem;
+}
+
+#pagefooter {
+  background-color: cornflowerblue;
+  min-height: auto;
+  padding: 1rem;
+}
+
+#pagefooter .container {
+  text-align: center;
+  min-height: auto;
+}
+
+#subfooter {
+  background-color: darkorchid;
+  min-height: 10rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+audio {
+  display: block;
+  margin: auto;
+
+  background-color: red;
+  border: 5px solid red;
+}
