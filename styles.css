@@ -91,3 +91,15 @@ audio {
   background-color: red;
   border: 5px solid red;
 }
+
+#aifooter {
+  background-color: black;
+  color: white;
+  min-height: auto;
+  padding: 1rem;
+  text-align: center;
+}
+#aifooter .container {
+  min-height: auto;
+  text-align: center;
+}
