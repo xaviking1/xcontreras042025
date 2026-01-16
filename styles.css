@@ -20,11 +20,33 @@ body {
   padding: 1rem;
 }
 
+#pageheader nav ul {
+  list-style-type: none;
+  padding: 0;
+  background-color: coral;
+  margin: 0;
+}
+
+#pageheader nav ul li {
+  border: 2px solid black;
+  padding: 1rem;
+  background-color: darkkhaki;
+  martgin: 0.5rem;
+}
+#pageheader nav {
+  text-align: center;
+}
+
+#pageheader nav ul li:hover {
+  background-color: darkslateblue;
+}
+
 #logo {
   width: 6.25rem;
   height: 6.25rem;
   background-color: none;
-  background-image: url(WorkSamples/XClogo.png);
+  background-image: url(Images/XClogo.png);
+  background-size: cover;
 }
 
 #pageheader .container {
@@ -37,7 +59,7 @@ body {
   background-color: red;
   min-height: 1rem;
   padding: 1rem;
-  background-image: url(Images/hero.png);
+  background-image: url(Images/wallpaper2.png);
   background-size: cover;
   aspect-ratio: 16 / 9;
 }
@@ -102,4 +124,41 @@ audio {
 #aifooter .container {
   min-height: auto;
   text-align: center;
+}
+
+blockquote {
+  border-left: 5px solid none;
+  margin-left: 0;
+  padding-left: 1rem;
+  font-style: italic;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  #pageheader nav ul {
+    background-color: rgb(255, 140, 0);
+    margin-top: 2rem;
+  }
+
+  #pageheader nav ul li {
+    display: inline-block;
+  }
+
+  #pagecontent {
+    background-color: red;
+  }
+
+  #career {
+    background-color: rgb(60, 0, 255);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #pagecontent {
+    background-color: rgb(21, 255, 0);
+  }
+
+  #career {
+    background-color: rgb(8, 0, 255);
+  }
 }
