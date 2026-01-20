@@ -21,13 +21,23 @@
         padding: 0.5rem;
       }
 
-      .card {
-        border: 1px solid #ccc;
-        width: 200px;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        border-radius: 5px;
-      }
+
+.card-container {
+  display: flex;  
+  justify-content: space-around;
+  align-items: flex-start; 
+  flex-wrap: wrap; 
+  gap: 20px; 
+}
+
+.card {
+  width: 200px; 
+  padding: 20px;
+  border: 1px solid #000000;
+  background-color: #f72b2b;
+  border-radius: 8px;
+}
+
     </style>
   </head>
 
@@ -63,16 +73,6 @@
       justify-content: center;
       gap: 1rem;
     }
-
-    .card {
-      border: 2px solid black;
-      background-color: lightyellow;
-      width: 60%;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 1rem;
-    }
   </style>
 
   <body>
@@ -96,18 +96,20 @@
     </div>
 
     <h2>Cards</h2>
-    <div class="card">
-      <h3>Card Title 1</h3>
-      <p>This is a description for card 1.</p>
-    </div>
-    <div class="card">
-      <h3>Card Title 2</h3>
-      <p>This is a description for card 1.</p>
-    </div>
-    <div class="card">
-      <h3>Card Title 3</h3>
-      <p>This is a description for card 1.</p>
-    </div>
+    <div class="card-container">
+      <div class="card">
+        <h3>Card Title 1</h3>
+        <p>This is a description for card 1.</p>
+      </div>
+      <div class="card">
+        <h3>Card Title 2</h3>
+        <p>This is a description for card 1.</p>
+      </div>
+      <div class="card">
+        <h3>Card Title 3</h3>
+        <p>This is a description for card 1.</p>
+      </div>
+    </div class="card-container">
 
     <h2>Link Lists</h2>
     <ul>
