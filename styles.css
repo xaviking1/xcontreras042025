@@ -4,6 +4,8 @@ html {
 
 body {
   background-color: red;
+  margin: 0;
+  color: #333;
 }
 
 .container {
@@ -12,10 +14,11 @@ body {
   margin: auto;
   background-color: white;
   padding: 1rem;
+  border-radius: 25px;
 }
 
 #pageheader {
-  background-color: coral;
+  background-color: #790805;
   min-height: auto;
   padding: 1rem;
 }
@@ -23,7 +26,7 @@ body {
 #pageheader nav ul {
   list-style-type: none;
   padding: 0;
-  background-color: coral;
+  background-color: none;
   margin: 0;
 }
 
@@ -31,32 +34,35 @@ body {
   border: 2px solid black;
   padding: 1rem;
   background-color: darkkhaki;
-  martgin: 0.5rem;
+  margin: 0.5rem;
 }
 #pageheader nav {
   text-align: center;
 }
 
 #pageheader nav ul li:hover {
-  background-color: darkslateblue;
+  background-color: #9a2420;
 }
 
 #logo {
   width: 6.25rem;
   height: 6.25rem;
   background-color: none;
-  background-image: url(Images/XClogo.png);
+  background-image: url(Images/ChatGPT\ Image\ Feb\ 24\,\ 2026\,\ 11_00_25\ AM.png);
   background-size: cover;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin: auto;
 }
 
 #pageheader .container {
-  background-color: none;
+  background-color: #790805;
   min-height: auto;
   text-align: center;
 }
 
 #media {
-  background-color: red;
+  background-color: black;
   min-height: 1rem;
   padding: 1rem;
   background-image: url(Images/wallpaper2.png);
@@ -65,31 +71,31 @@ body {
 }
 
 #career {
-  background-color: aqua;
+  background-color: black;
   min-height: 10rem;
   padding: 1rem;
 }
 
 #pagecontent {
-  background-color: lightgreen;
+  background-color: rgb(0, 0, 0);
   min-height: 10rem;
   padding: 1rem;
 }
 
 #semester1 {
-  background-color: plum;
+  background-color: rgb(0, 0, 0);
   min-height: 10rem;
   padding: 1rem;
 }
 
 #semester2 {
-  background-color: brown;
+  background-color: rgb(0, 0, 0);
   min-height: 10rem;
   padding: 1rem;
 }
 
 #pagefooter {
-  background-color: cornflowerblue;
+  background-color: rgb(0, 0, 0);
   min-height: auto;
   padding: 1rem;
 }
@@ -100,7 +106,7 @@ body {
 }
 
 #subfooter {
-  background-color: darkorchid;
+  background-color: #790805;
   min-height: 10rem;
   padding: 1rem;
   text-align: center;
@@ -109,9 +115,8 @@ body {
 audio {
   display: block;
   margin: auto;
-
-  background-color: red;
-  border: 5px solid red;
+  background-color: white;
+  border: 5px solid white;
 }
 
 #aifooter {
@@ -134,9 +139,13 @@ blockquote {
   text-align: center;
 }
 
+a {
+  color: #790805;
+  text-decoration: none;
+}
 @media screen and (min-width: 600px) {
   #pageheader nav ul {
-    background-color: rgb(255, 140, 0);
+    background-color: #790805;
     margin-top: 2rem;
   }
 
@@ -145,20 +154,23 @@ blockquote {
   }
 
   #pagecontent {
-    background-color: red;
+    background-color: black;
   }
 
   #career {
-    background-color: rgb(60, 0, 255);
+    background-color: black;
   }
 }
 
 @media screen and (min-width: 1000px) {
   #pagecontent {
-    background-color: rgb(21, 255, 0);
+    background-color: rgb(0, 0, 0);
   }
 
   #career {
-    background-color: rgb(8, 0, 255);
+    background-color: rgb(0, 0, 0);
+  }
+  #logo {
+    margin: 1px;
   }
 }
