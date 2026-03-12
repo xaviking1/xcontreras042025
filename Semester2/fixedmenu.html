@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Fixed Menu</title>
+    <style>
+      /* Mobile First CSS */
+      html {
+        /* Temporary - Delete */
+        height: 200%;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: orange);
+        margin: 0;
+      }
+      #pageheader {
+        background-color: rgb(0, 0, 0);
+        padding: 1rem;
+        /* Default */
+        position: static;
+      }
+      #logo {
+        height: 100px;
+        width: 100px;
+        margin: auto;
+        display: block;
+      }
+      #fblogoheader {
+        background-color: orangered;
+      }
+      #pageheader h1 {
+        text-align: center;
+        color: white;
+        /* Remove */
+        background-color:orangered;
+      }
+      #pageheader nav {
+        background-color: orangered;
+        padding: 0.5 rem;
+        border-radius: 10px;
+      }
+      #pageheader ul {
+        padding: 0.5rem;
+        list-style-type: none;
+        background-color: whitesmoke;
+        /* Flexbox component */
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      #pageheader li {
+        text-align: center;
+        border: 1px solid white;
+        padding: 0.5rem;
+        background-color: black;
+      }
+      #pageheader a {
+        color: white;
+        text-decoration: none;
+      }
+      /* None header elements */
+      main {
+        padding: 1rem;
+      }
+      p {
+        line-height: 1.5;
+        color: #333;
+      }
+      img {
+        width: 100px;
+      }
+
+      @media screen and (min-width: 650px) {
+        body {
+          background-color:orangered;
+        }
+        #pageheader {
+          position: fixed;
+          top: 0px;
+          left: 0px;
+          right: 0px;
+          /* Flexbox component */
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        #fblogoheader {
+          /* flexbox component*/
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+        }
+        #pageheader ul {
+          flex-direction: row;
+          justify-content: center;
+        }
+        #pageheader nav {
+          min-width: 400px;
+        }
+      }
+      #logo {
+        width: 80px;
+        height: 80px;
+      }
+      main {
+        padding-top: 200px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="pageheader">
+      <!-- Start the logo and h1 -->
+      <div id="fblogoheader">
+        <img
+          src="semesterImages/paws_logo.png"
+          alt="Paws and Whiskers"
+          id="logo"
+        />
+        <h1>Paws and Whiskers</h1>
+      </div>
+      <!-- End the logo and h1 -->
+
+      <!-- Start navigation -->
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Our</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </nav>
+      <!-- End navigation -->
+    </header>
+
+    <main>
+      <h2>Fixed Menu</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit eius
+        placeat et explicabo ducimus reiciendis vel soluta accusantium in a
+        optio voluptas aliquid facere adipisci ipsum sunt possimus deleniti enim
+        neque temporibus, similique qui, numquam maiores. Dignissimos, placeat
+        amet nobis veritatis facere unde omnis? Sapiente voluptates eos aliquid
+        temporibus dolor incidunt, fugit iure iusto optio ratione, quae placeat
+        aperiam totam similique! Dolores culpa ducimus consectetur enim
+        voluptate fuga? Temporibus cum nam hic aliquid iste eveniet facere
+        ratione, quae modi veniam incidunt molestias voluptatibus, nihil ipsam
+        excepturi maxime quo. Ratione obcaecati blanditiis, quia suscipit optio
+        illum eos pariatur harum aspernatur laborum?
+      </p>
+    </main>
+  </body>
+</html>

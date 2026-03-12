@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Mini GTA Game</title>
+    <style>
+      body {
+        margin: 0;
+        background: #333;
+      }
+      #player {
+        width: 40px;
+        height: 40px;
+        background: red;
+        position: absolute;
+        top: 200px;
+        left: 200px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="player"></div>
+
+    <script>
+      let player = document.getElementById("player");
+
+      let x = 200;
+      let y = 200;
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "w") y -= 10;
+        if (e.key === "s") y += 10;
+        if (e.key === "a") x -= 10;
+        if (e.key === "d") x += 10;
+
+        player.style.left = x + "px";
+        player.style.top = y + "px";
+      });
+    </script>
+  </body>
+</html>

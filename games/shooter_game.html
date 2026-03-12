@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Survival Shooter</title>
+
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background: #111;
+        color: white;
+        font-family: Arial;
+      }
+
+      #score {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 20px;
+      }
+
+      .player {
+        width: 40px;
+        height: 40px;
+        background: lime;
+        position: absolute;
+      }
+
+      .enemy {
+        width: 35px;
+        height: 35px;
+        background: red;
+        position: absolute;
+      }
+
+      .bullet {
+        width: 8px;
+        height: 15px;
+        background: yellow;
+        position: absolute;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="score">Score: 0</div>
+    <div id="player" class="player"></div>
+
+    <script>
+      let player = document.getElementById("player");
+      let scoreText = document.getElementById("score");
+
+      let x = window.innerWidth / 2;
+      let y = window.innerHeight / 2;
+
+      let score = 0;
+
+      player.style.left = x + "px";
+      player.style.top = y + "px";
+
+      let bullets = [];
+      let enemies = [];
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key == "w") y -= 15;
+        if (e.key == "s") y += 15;
+        if (e.key == "a") x -= 15;
+        if (e.key == "d") x += 15;
+
+        if (e.key == " ") {
+          shoot();
+        }
+
+        player.style.left = x + "px";
+        player.style.top = y + "px";
+      });
+
+      function shoot() {
+        let bullet = document.createElement("div");
+        bullet.className = "bullet";
+
+        bullet.style.left = x + 15 + "px";
+        bullet.style.top = y + "px";
+
+        document.body.appendChild(bullet);
+
+        bullets.push(bullet);
+      }
+
+      function spawnEnemy() {
+        let enemy = document.createElement("div");
+        enemy.className = "enemy";
+
+        let ex = Math.random() * window.innerWidth;
+        let ey = Math.random() * window.innerHeight;
+
+        enemy.style.left = ex + "px";
+        enemy.style.top = ey + "px";
+
+        document.body.appendChild(enemy);
+
+        enemies.push(enemy);
+      }
+
+      setInterval(spawnEnemy, 2000);
+
+      function gameLoop() {
+        bullets.forEach((bullet, bi) => {
+          let by = bullet.offsetTop;
+
+          bullet.style.top = by - 10 + "px";
+
+          if (by < 0) {
+            bullet.remove();
+            bullets.splice(bi, 1);
+          }
+        });
+
+        enemies.forEach((enemy, ei) => {
+          let ex = enemy.offsetLeft;
+          let ey = enemy.offsetTop;
+
+          let dx = x - ex;
+          let dy = y - ey;
+
+          enemy.style.left = ex + dx * 0.01 + "px";
+          enemy.style.top = ey + dy * 0.01 + "px";
+
+          bullets.forEach((bullet, bi) => {
+            if (
+              bullet.offsetLeft < enemy.offsetLeft + 35 &&
+              bullet.offsetLeft + 8 > enemy.offsetLeft &&
+              bullet.offsetTop < enemy.offsetTop + 35 &&
+              bullet.offsetTop + 15 > enemy.offsetTop
+            ) {
+              enemy.remove();
+              bullet.remove();
+
+              enemies.splice(ei, 1);
+              bullets.splice(bi, 1);
+
+              score++;
+              scoreText.innerText = "Score: " + score;
+            }
+          });
+        });
+
+        requestAnimationFrame(gameLoop);
+      }
+
+      gameLoop();
+    </script>
+  </body>
+</html>
