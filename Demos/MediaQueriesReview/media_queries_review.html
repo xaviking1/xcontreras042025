@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+
+    <style>
+      /* mobile */
+      body {
+        background-color: rgb(255, 158, 252);
+      }
+
+      h1,
+      h2 {
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      /* tablet */
+
+      @media screen and (min-width: 600px) {
+        body {
+          background-color: rgb(132, 230, 99);
+        }
+
+        h1,
+        h2 {
+          color: rgb(96, 122, 238);
+          text-align: center;
+          text-transform: uppercase;
+        }
+      }
+
+      @media screen and (min-width: 1000px) {
+        body {
+          background-color: rgb(11, 56, 216);
+        }
+
+        h1,
+        h2 {
+          color: rgb(0, 0, 0);
+          text-align: center;
+          text-transform: uppercase;
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        body {
+          background-color: rgb(255, 255, 255);
+        }
+
+        h1,
+        h2 {
+          color: rgb(0, 0, 0);
+          text-align: center;
+          text-transform: uppercase;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Media Queries</h1>
+    <h2>Xavier Contreras</h2>
+  </body>
+</html>
