@@ -3,87 +3,180 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>It's a Dog's Life</title>
+    <title>It's a Dogs Life</title>
 
     <style>
       body {
         background-color: black;
         color: white;
-        margin: 0%;
-        font-family: Arial, sans-serif;
-      }
-
-      header {
-        background-color: #052524;
-        padding: 15px 30px 15px 30px;
-        border-bottom: 5px solid #fff;
-      }
-
-      header h1 {
         margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      header {
+        background-color: #052024;
+        padding: 15px 30px 15px 30px;
+        border-bottom: 5px solid white;
+      }
+      header h1 {
         font-size: 1.5rem;
       }
       /* Hero Section */
-
       .hero {
-        height: 85vh;
-        /* background-image: linear-gradient(red, blue, white); */
         background-image:
-          linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
           url(Images/dog_on_couch.jpg);
+        height: 85vh;
         background-size: cover;
-        background-position: center;
+        background-repeat: no-repeat;
+        background-position: center center;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
       }
+      .hero-content {
+        background-color: none;
+      }
+      .hero-content h2 {
+        font-size: 3rem;
+      }
+
+      .hero-content p {
+        font-size: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .hero-content a {
+        display: inline-block;
+        background-color: rgb(0, 6, 128);
+        padding: 12px 24px 12px 24px;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+      }
+      .intro {
+        /* background-color: red; */
+        padding:30px ;
+      }
+      .intro-content {
+        background-color: white;
+        color: #333;
+        line-height: 1.7;
+        padding: 1rem 1.5rem;
+        border-radius: 10px;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      footer
+      {
+        background-color: #3E0D0A;
+        padding: 20px;
+        text-align: center;
+        border: 5px solid white;
+      }
+
+      /* Cards */
+.services
+{
+background-color: slategrey;
+padding: 50px 30px;
+}
+.servicesh2
+{
+text-align: center;
+font: 2rem;
+margin-bottom: 30px;
+}
+.fb-cards
+{
+  /* border: 5px dotted red; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card
+{
+  background-color: white;
+  color: #333;
+  text-align: center;
+  border-radius: 10px;
+  border: 5px solid silver;
+  width: 300px;
+  padding: 20px;
+}
+.card h3
+{
+font-size: 1.3rem;
+margin-bottom: 1rem;
+}
+
+.card p{}
+
+.card a
+{
+    display: inline-block;
+        background-color: rgb(255, 130, 89);
+        padding: 12px 24px 12px 24px;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+}
+
+
+
+
     </style>
   </head>
-
   <body>
     <header>
-      <h1>It's a Dog's Life</h1>
+      <h1>It's a Dogs Life</h1>
     </header>
-
     <main>
       <section class="hero">
         <div class="hero-content">
           <h2>Welcome to It's a Dog's Life</h2>
-          <p>We love dogs more than humans.</p>
+          <p>We love dogs more than humans</p>
           <a href="#">Get Started</a>
         </div>
       </section>
 
       <section class="intro">
         <div class="intro-content">
-          <h2>About Us</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-            eaque vel enim quam repudiandae numquam, perspiciatis earum, fugiat
-            incidunt sit voluptas voluptatibus in, voluptatum error? Quidem ad
-            nobis magnam minus est corrupti perferendis voluptas impedit?
-          </p>
-        </div>
+        <h2>About Us</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias officia
+          eos nesciunt est officiis ratione iure pariatur facere consequatur
+          ipsam, aut ullam dolorum eum culpa blanditiis. Aperiam ipsa ab
+          adipisci quidem laudantium quo sint dolorem.
+        </p>
       </section>
+    </div>
 
       <section class="services">
         <h2>Our Services</h2>
-
         <div class="fb-cards">
-          <div class="card">
-            <h3>Card One</h3>
-            <p>This is a card. Add a short description.</p>
-            <a href="#">Read More</a>
-          </div>
-          <div class="card">
-            <h3>Card Two</h3>
-            <p>This is a card. Add a short description.</p>
-            <a href="#">Read More</a>
-          </div>
-          <div class="card">
-            <h3>Card Three</h3>
-            <p>This is a card. Add a short description.</p>
-            <a href="#">Read More</a>
-          </div>
+        <div class="card">
+          <h3>Card One</h3>
+          <p>This is a card. Add a short description</p>
+          <a href="#">Read More</a>
+        </div>
+        <div class="card">
+          <h3>Card Two</h3>
+          <p>This is a card. Add a short description</p>
+          <a href="#">Read More</a>
+        </div>
+        <div class="card">
+          <h3>Card Three</h3>
+          <p>This is a card. Add a short description</p>
+          <a href="#">Read More</a>
         </div>
       </section>
+    </div>
     </main>
 
     <footer>
